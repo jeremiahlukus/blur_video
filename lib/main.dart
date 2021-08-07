@@ -48,6 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
             BlurEffectPaintMap(dimensionsMap: kRightBlurEffect(screenSize)),
             BlurEffectPaintMap(dimensionsMap: kLeftBlurEffect(screenSize)),
             Container(
+              height: screenSize.height,
+              padding: EdgeInsets.only(top: 100),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: FractionalOffset.bottomLeft,
