@@ -26,10 +26,10 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
   @override
   void initState() {
     BetterPlayerConfiguration betterPlayerConfiguration = BetterPlayerConfiguration(
-        aspectRatio: 16 / 9,
-        fit: BoxFit.contain,
-        autoPlay: true,
-        controlsConfiguration: BetterPlayerControlsConfiguration(sigmaX: 0, sigmaY: 0));
+      aspectRatio: 16 / 9,
+      fit: BoxFit.contain,
+      autoPlay: true,
+    );
     BetterPlayerDataSource dataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
       widget.videoUrl,
@@ -44,14 +44,9 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
   Widget build(BuildContext context) {
     // bool videoStatus = Provider.of<VideoPlayerProvider>(context, listen: true).getVideoStatus;
     // pauseVideo(videoStatus);
-    return ClipRRect(
-      borderRadius: BorderRadius.all(
-        Radius.circular(30),
-      ),
-      child: AspectRatio(
-        aspectRatio: 16 / 9,
-        child: BetterPlayer(controller: _betterPlayerController),
-      ),
+    return AspectRatio(
+      aspectRatio: 16 / 9,
+      child: BetterPlayer(controller: _betterPlayerController),
     );
   }
 }

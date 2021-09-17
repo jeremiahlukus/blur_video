@@ -11,9 +11,11 @@ packages:
   better_player:
     dependency: "direct main"
     description:
-      name: better_player
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: "feature/august_changes_2"
+      resolved-ref: d3e21ef7daaf8edcc36c9d6298b8d37bcbce855a
+      url: "https://github.com/jhomlala/betterplayer"
+    source: git
     version: "0.0.73"
   boolean_selector:
     dependency: transitive
