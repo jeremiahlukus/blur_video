@@ -1,9 +1,11 @@
 import 'package:blur_video/video_player_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'blur_effect.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white));
   runApp(MyApp());
 }
 
