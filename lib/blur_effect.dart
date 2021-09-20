@@ -26,7 +26,7 @@ class BlurEffect extends StatelessWidget {
 
 class BlurEffectPaintMap extends StatelessWidget {
   final Map<String, double> dimensionsMap;
-  BlurEffectPaintMap({@required this.dimensionsMap});
+  BlurEffectPaintMap({required this.dimensionsMap});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class BlurEffectPaintMap extends StatelessWidget {
       child: Stack(
         children: [
           Transform.rotate(
-            angle: dimensionsMap["rotation"] != null ? -3.14 / dimensionsMap["rotation"] : -3.14 / 4,
+            angle: dimensionsMap["rotation"] != null ? -3.14 / dimensionsMap["rotation"]! : -3.14 / 4,
             child: BackdropFilter(
               filter: ui.ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
               child: Container(

@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 class VideoPlayerItem extends StatefulWidget {
   // This will contain the URL/asset path which we want to play
   final String videoUrl;
-  final bool looping;
+  final bool? looping;
   final height;
   final bool autoPlay;
 
   VideoPlayerItem({
-    @required this.videoUrl,
+    required this.videoUrl,
     this.height,
     this.looping,
     this.autoPlay = true,
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class VideoPlayerItem extends StatefulWidget {
 }
 
 class _VideoPlayerItemState extends State<VideoPlayerItem> {
-  BetterPlayerController _betterPlayerController;
+  late BetterPlayerController _betterPlayerController;
 
   @override
   void initState() {
